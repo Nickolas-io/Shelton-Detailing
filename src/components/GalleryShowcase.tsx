@@ -98,19 +98,19 @@ export default function GalleryShowcase() {
   }, [activeFilter]);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
           Transformations
         </p>
         <h1 className="text-3xl font-semibold">Gallery</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Each job is structured as a case study: a transition video, before/after visuals, and
           curated detail highlights.
         </p>
       </header>
 
-      <section className="rounded-2xl border p-5 text-sm text-gray-700 motion-fade-up motion-1">
+      <section className="card p-5 text-sm text-muted motion-fade-up motion-1">
         <p className="font-semibold">How to add your media</p>
         <p className="mt-2">
           Place files in <span className="font-medium">/public/gallery/[job-name]/</span> and update
@@ -126,8 +126,8 @@ export default function GalleryShowcase() {
             type="button"
             onClick={() => setActiveFilter(filter)}
             aria-pressed={activeFilter === filter}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition hover-lift focus-ring ${
-              activeFilter === filter ? "bg-black text-white" : "bg-white"
+            className={`rounded-full border px-4 py-2 text-sm font-medium transition hover-lift focus-ring border-gold ${
+              activeFilter === filter ? "bg-surface-2 text-app" : "bg-surface text-muted"
             }`}
           >
             {filter}
@@ -139,21 +139,21 @@ export default function GalleryShowcase() {
         {filteredJobs.map((job, index) => (
           <section
             key={job.title}
-            className={`rounded-2xl border p-6 sm:p-8 motion-fade-up motion-${(index % 5) + 1}`}
+            className={`card p-6 sm:p-8 motion-fade-up motion-${(index % 5) + 1}`}
           >
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
                   Project
                 </p>
                 <h2 className="mt-2 text-2xl font-semibold">{job.title}</h2>
-                <p className="mt-1 text-sm text-gray-600">
+                <p className="mt-1 text-sm text-muted">
                   {job.vehicle} • {job.location}
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
                 {job.tags.map((tag) => (
-                  <span key={tag} className="rounded-full border px-3 py-1 text-xs gold-outline">
+                  <span key={tag} className="rounded-full border px-3 py-1 text-xs border-gold text-muted">
                     {tag}
                   </span>
                 ))}
@@ -161,13 +161,13 @@ export default function GalleryShowcase() {
             </div>
 
             <div className="mt-6 grid gap-4 lg:grid-cols-[1.4fr_1fr]">
-              <div className="rounded-2xl border bg-white/70 p-3 hover-lift gold-outline">
-                <div className="rounded-xl border bg-gray-50/60 p-3 soft-glow">
-                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.28em] text-gray-500">
+              <div className="rounded-2xl border p-3 hover-lift border-gold bg-surface">
+                <div className="rounded-xl border p-3 soft-glow border-gold bg-surface-2">
+                  <div className="flex items-center justify-between text-xs uppercase tracking-[0.28em] text-muted">
                     <span>Full Transition</span>
                     <span className="gold-text">Video</span>
                   </div>
-                  <div className="mt-3 overflow-hidden rounded-xl border bg-black/90">
+                  <div className="mt-3 overflow-hidden rounded-xl border bg-black/90 border-gold">
                     <video
                       className="aspect-video w-full object-cover"
                       src={job.video}
@@ -185,9 +185,9 @@ export default function GalleryShowcase() {
                   {job.highlights.map((src) => (
                     <figure
                       key={src}
-                      className="rounded-xl border bg-white/70 p-2 hover-lift gold-outline"
+                      className="rounded-xl border p-2 hover-lift border-gold bg-surface"
                     >
-                      <div className="aspect-square overflow-hidden rounded-lg border bg-gray-50/70">
+                      <div className="aspect-square overflow-hidden rounded-lg border border-gold bg-surface-2">
                         <img
                           src={src}
                           alt={`${job.title} detail highlight`}
@@ -197,9 +197,9 @@ export default function GalleryShowcase() {
                     </figure>
                   ))}
                 </div>
-                <div className="rounded-xl border p-4 text-sm text-gray-700">
+                <div className="rounded-xl border p-4 text-sm text-muted border-gold bg-surface-2">
                   <p className="font-semibold">Work performed</p>
-                  <ul className="mt-2 list-disc pl-5 text-sm text-gray-600">
+                  <ul className="mt-2 list-disc pl-5 text-sm text-muted">
                     {job.summary.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -213,11 +213,11 @@ export default function GalleryShowcase() {
                 { label: "Before", src: job.before },
                 { label: "After", src: job.after },
               ].map((item) => (
-                <figure key={item.label} className="rounded-xl border p-3 hover-lift">
-                  <figcaption className="text-xs uppercase tracking-[0.28em] text-gray-500">
+                <figure key={item.label} className="rounded-xl border p-3 hover-lift border-gold bg-surface">
+                  <figcaption className="text-xs uppercase tracking-[0.28em] text-muted">
                     {item.label}
                   </figcaption>
-                  <div className="mt-2 aspect-video overflow-hidden rounded-lg border bg-gray-50/70">
+                  <div className="mt-2 aspect-video overflow-hidden rounded-lg border border-gold bg-surface-2">
                     <img
                       src={item.src}
                       alt={`${job.title} ${item.label.toLowerCase()} image`}

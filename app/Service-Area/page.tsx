@@ -27,35 +27,35 @@ const areas = [
 
 export default function ServiceArea() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">Service area</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Service area</p>
         <h1 className="text-3xl font-semibold">Mobile detailing across DFW</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Shelton Detailing is a mobile service based in the DFW area, with primary coverage in
           Arlington and surrounding cities. If you’re nearby, reach out and we’ll confirm.
         </p>
       </header>
 
-      <section className="rounded-2xl border p-6 motion-fade-up motion-1">
+      <section className="card p-6 motion-fade-up motion-1">
         <h2 className="text-lg font-semibold">Common service areas</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
-            <div key={area} className="rounded-xl border px-4 py-3 text-sm text-gray-700 hover-lift">
+            <div key={area} className="card px-4 py-3 text-sm text-muted hover-lift">
               {area}
             </div>
           ))}
         </div>
       </section>
 
-      <section className="rounded-2xl bg-gray-50 p-6 motion-fade-up motion-2">
+      <section className="cta-card p-6 motion-fade-up motion-2">
         <h2 className="text-lg font-semibold">How mobile service works</h2>
-        <ul className="mt-3 list-disc pl-5 text-sm text-gray-700">
+        <ul className="mt-3 list-disc pl-5 text-sm text-muted">
           <li>We arrive at your home or workplace with everything needed.</li>
           <li>Access to water and power may be requested depending on the service.</li>
           <li>We’ll confirm scheduling, timing, and the best setup in advance.</li>
         </ul>
-        <Link href="/Contact" className="mt-4 inline-block text-sm font-medium underline focus-ring">
+        <Link href="/Contact" className="mt-4 inline-block text-sm font-medium underline focus-ring text-muted hover:text-app">
           Check availability →
         </Link>
       </section>

@@ -14,19 +14,19 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">About</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">About</p>
         <h1 className="text-3xl font-semibold">Craft over shortcuts</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Shelton Detailing is built for owners who care about the finish, the details, and the
           longevity of their vehicle. The work is calm, deliberate, and results-first.
         </p>
       </header>
 
-      <section className="rounded-2xl border p-6 motion-fade-up motion-1">
+      <section className="card p-6 motion-fade-up motion-1">
         <h2 className="text-xl font-semibold">Standards that don’t bend</h2>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Every surface is inspected, every step is chosen for the condition in front of us, and
           every finish is protected with paint-safe methods. The goal is a result that looks right
           in any light, not just under a camera.
@@ -34,41 +34,41 @@ export default function About() {
       </section>
 
       <section className="grid gap-4 sm:grid-cols-2 motion-fade-up motion-2">
-        <div className="rounded-2xl border p-6">
+        <div className="card p-6">
           <h3 className="text-lg font-semibold">Why quality takes time</h3>
-          <p className="mt-2 text-sm text-gray-700">
+          <p className="mt-2 text-sm text-muted">
             Correction is measured, not rushed. Proper preparation, controlled polishing, and
             careful finishing are the difference between “clean” and truly restored.
           </p>
         </div>
-        <div className="rounded-2xl border p-6">
+        <div className="card p-6">
           <h3 className="text-lg font-semibold">Respect for every vehicle</h3>
-          <p className="mt-2 text-sm text-gray-700">
+          <p className="mt-2 text-sm text-muted">
             Whether it’s a daily driver or a collector piece, the approach is the same: protect the
             surface, refine the finish, and leave it better than it arrived.
           </p>
         </div>
       </section>
 
-      <section className="rounded-2xl bg-gray-50 p-6 motion-fade-up motion-3">
+      <section className="cta-card p-6 motion-fade-up motion-3">
         <h3 className="text-lg font-semibold">The philosophy in practice</h3>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Restoration-level work doesn’t come from a checklist. It comes from experience with paint,
           materials, and the patience to do it right.
         </p>
-        <div className="mt-4 flex flex-wrap gap-3 text-sm text-gray-600">
-          <span className="rounded-full border px-3 py-1 gold-outline">Paint-safe methods</span>
-          <span className="rounded-full border px-3 py-1 gold-outline">Satisfaction-first</span>
-          <span className="rounded-full border px-3 py-1 gold-outline">Service area: DFW</span>
+        <div className="mt-4 flex flex-wrap gap-3 text-sm text-muted">
+          <span className="rounded-full border px-3 py-1 border-gold">Paint-safe methods</span>
+          <span className="rounded-full border px-3 py-1 border-gold">Satisfaction-first</span>
+          <span className="rounded-full border px-3 py-1 border-gold">Service area: DFW</span>
         </div>
         <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
-          <Link href="/Process" className="underline focus-ring">
+          <Link href="/Process" className="underline focus-ring text-muted hover:text-app">
             View the process →
           </Link>
-          <Link href="/Services" className="underline focus-ring">
+          <Link href="/Services" className="underline focus-ring text-muted hover:text-app">
             Explore services →
           </Link>
-          <Link href="/Contact" className="underline focus-ring">
+          <Link href="/Contact" className="underline focus-ring text-muted hover:text-app">
             Start a quote →
           </Link>
         </div>

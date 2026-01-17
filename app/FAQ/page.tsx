@@ -41,20 +41,20 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">FAQ</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">FAQ</p>
         <h1 className="text-3xl font-semibold">Common questions</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Straight answers to the questions we hear most often.
         </p>
       </header>
 
       <section className="grid gap-4 sm:grid-cols-2 motion-fade-up motion-1">
         {faqs.map((faq) => (
-          <div key={faq.question} className="rounded-2xl border p-6 hover-lift">
+          <div key={faq.question} className="card p-6 hover-lift">
             <h2 className="text-lg font-semibold">{faq.question}</h2>
-            <p className="mt-2 text-sm text-gray-700">{faq.answer}</p>
+            <p className="mt-2 text-sm text-muted">{faq.answer}</p>
           </div>
         ))}
       </section>

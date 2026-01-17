@@ -42,11 +42,11 @@ const steps = [
 
 export default function Process() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">Process</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">Process</p>
         <h1 className="text-3xl font-semibold">A workflow built for precision</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           This process filters out shortcuts and protects the long-term finish. Quality takes time
           because each stage earns the right to the next.
         </p>
@@ -54,30 +54,30 @@ export default function Process() {
 
       <section className="grid gap-4 sm:grid-cols-2 motion-fade-up motion-1">
         {steps.map((step) => (
-          <div key={step.title} className="rounded-2xl border p-6 hover-lift">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+          <div key={step.title} className="card p-6 hover-lift">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
               {step.title}
             </p>
             <h2 className="mt-2 text-xl font-semibold">{step.title}</h2>
-            <p className="mt-2 text-sm text-gray-700">{step.detail}</p>
+            <p className="mt-2 text-sm text-muted">{step.detail}</p>
           </div>
         ))}
       </section>
 
-      <section className="rounded-2xl bg-gray-50 p-6 motion-fade-up motion-2">
+      <section className="cta-card p-6 motion-fade-up motion-2">
         <h2 className="text-lg font-semibold">Why quality takes time</h2>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Proper correction and protection require careful prep, controlled technique, and
           thoughtful finishing. This is how we keep results consistent and paint-safe.
         </p>
         <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
-          <Link href="/Services" className="underline focus-ring">
+          <Link href="/Services" className="underline focus-ring text-muted hover:text-app">
             Explore services →
           </Link>
-          <Link href="/Gallery" className="underline focus-ring">
+          <Link href="/Gallery" className="underline focus-ring text-muted hover:text-app">
             View transformations →
           </Link>
-          <Link href="/Contact" className="underline focus-ring">
+          <Link href="/Contact" className="underline focus-ring text-muted hover:text-app">
             Request a quote →
           </Link>
         </div>

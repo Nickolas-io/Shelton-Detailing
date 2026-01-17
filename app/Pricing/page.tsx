@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 export default function Pricing() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
           Pricing & quoting
         </p>
         <h1 className="text-3xl font-semibold">Condition-based pricing</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Pricing reflects the time, materials, and precision required for your specific vehicle.
           No two finishes are the same.
         </p>
@@ -56,19 +56,19 @@ export default function Pricing() {
             ],
           },
         ].map((p) => (
-          <div key={p.name} className="rounded-2xl border p-5 hover-lift">
+          <div key={p.name} className="card p-5 hover-lift">
             <p className="font-semibold">{p.name}</p>
             <p className="mt-2 text-2xl font-semibold">{p.price}</p>
-            <ul className="mt-3 list-disc pl-5 text-sm text-gray-600">
+            <ul className="mt-3 list-disc pl-5 text-sm text-muted">
               {p.points.map((x) => <li key={x}>{x}</li>)}
             </ul>
           </div>
         ))}
       </section>
 
-      <section className="rounded-2xl border p-6 motion-fade-up motion-2">
+      <section className="card p-6 motion-fade-up motion-2">
         <h2 className="text-lg font-semibold">What affects cost</h2>
-        <ul className="mt-3 list-disc pl-5 text-sm text-gray-700">
+        <ul className="mt-3 list-disc pl-5 text-sm text-muted">
           <li>Vehicle size and body shape</li>
           <li>Paint condition and defect severity</li>
           <li>Interior condition, stains, or odors</li>
@@ -77,28 +77,28 @@ export default function Pricing() {
         </ul>
       </section>
 
-      <section className="rounded-2xl bg-gray-50 p-6 motion-fade-up motion-3">
+      <section className="cta-card p-6 motion-fade-up motion-3">
         <h2 className="text-lg font-semibold">How quotes work</h2>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Send the details below and I’ll reply with a clear recommendation and pricing range:
         </p>
-        <ul className="mt-3 list-disc pl-5 text-sm text-gray-700">
+        <ul className="mt-3 list-disc pl-5 text-sm text-muted">
           <li>Vehicle year / make / model</li>
           <li>Current condition + goals</li>
           <li>Photos in good light</li>
           <li>Location or zip code</li>
           <li>Timeline or preferred dates</li>
         </ul>
-        <Link href="/Contact" className="mt-4 inline-block underline text-sm font-medium focus-ring">
+        <Link href="/Contact" className="mt-4 inline-block underline text-sm font-medium focus-ring text-muted hover:text-app">
           Get a quote →
         </Link>
       </section>
 
-      <div className="flex flex-wrap gap-4 text-sm font-medium text-gray-600">
-        <Link href="/Process" className="underline focus-ring">
+      <div className="flex flex-wrap gap-4 text-sm font-medium text-muted">
+        <Link href="/Process" className="underline focus-ring hover:text-app">
           See the process →
         </Link>
-        <Link href="/FAQ" className="underline focus-ring">
+        <Link href="/FAQ" className="underline focus-ring hover:text-app">
           Read the FAQ →
         </Link>
       </div>

@@ -41,13 +41,13 @@ export default function Services() {
   ];
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 text-app">
       <header className="space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
           Services overview
         </p>
         <h1 className="text-3xl font-semibold">Restoration-level detailing</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Services are tailored to the condition of your vehicle. The goal is refinement,
           protection, and a finish that feels truly renewed.
         </p>
@@ -58,44 +58,44 @@ export default function Services() {
           <Link
             key={service.title}
             href={service.href}
-            className="rounded-2xl border p-6 hover-lift focus-ring"
+            className="card p-6 hover-lift focus-ring"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gray-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-muted">
               {service.title}
             </p>
             <h2 className="mt-2 text-xl font-semibold">{service.title}</h2>
-            <p className="mt-2 text-sm text-gray-600">{service.desc}</p>
-            <p className="mt-4 text-sm text-gray-500">{service.who}</p>
+            <p className="mt-2 text-sm text-muted">{service.desc}</p>
+            <p className="mt-4 text-sm text-muted">{service.who}</p>
           </Link>
         ))}
       </section>
 
-      <section className="rounded-2xl border p-6 motion-fade-up motion-2">
+      <section className="card p-6 motion-fade-up motion-2">
         <h3 className="text-lg font-semibold">Outcomes over checklists</h3>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Every vehicle is evaluated first. We correct what matters, preserve what’s healthy, and
           recommend only what will improve the final result.
         </p>
-        <div className="mt-5 flex flex-wrap gap-3 text-sm text-gray-600">
-          <span className="rounded-full border px-3 py-1 gold-outline">Paint-safe methods</span>
-          <span className="rounded-full border px-3 py-1 gold-outline">Condition-based planning</span>
-          <span className="rounded-full border px-3 py-1 gold-outline">Satisfaction-first</span>
+        <div className="mt-5 flex flex-wrap gap-3 text-sm text-muted">
+          <span className="rounded-full border px-3 py-1 border-gold">Paint-safe methods</span>
+          <span className="rounded-full border px-3 py-1 border-gold">Condition-based planning</span>
+          <span className="rounded-full border px-3 py-1 border-gold">Satisfaction-first</span>
         </div>
       </section>
 
-      <section className="rounded-2xl bg-gray-50 p-6 motion-fade-up motion-3">
+      <section className="cta-card p-6 motion-fade-up motion-3">
         <h3 className="text-lg font-semibold">Next step: process + quoting</h3>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Learn how the workflow is built and how quotes are tailored to your vehicle.
         </p>
         <div className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
-          <Link href="/Process" className="underline focus-ring">
+          <Link href="/Process" className="underline focus-ring text-muted hover:text-app">
             See the process →
           </Link>
-          <Link href="/Pricing" className="underline focus-ring">
+          <Link href="/Pricing" className="underline focus-ring text-muted hover:text-app">
             Pricing philosophy →
           </Link>
-          <Link href="/Contact" className="underline focus-ring">
+          <Link href="/Contact" className="underline focus-ring text-muted hover:text-app">
             Get a quote →
           </Link>
         </div>
